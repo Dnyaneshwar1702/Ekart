@@ -44,7 +44,7 @@ pipeline {
              steps {
                    withSonarQubeEnv('sonar-scanner') {
                         sh '''
-                            sonar-scanner \
+                           ${SCANNER_HOME}/bin/sonar-scanner \
                             -Dsonar.projectKey=EKART \
                             -Dsonar.projectName=EKART \
                             -Dsonar.java.binaries=target/classes
